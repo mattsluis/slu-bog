@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
+  get 'creatures/all'  => 'creatures#all'
+  get 'creatures/:id'  => 'creatures#show'
+
   root 'main#index'
 
   # get 'creatures/index'

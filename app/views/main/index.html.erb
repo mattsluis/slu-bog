@@ -1,2 +1,6 @@
 <h1>Main#index</h1>
-<p>Find me in app/views/main/index.html.erb</p>
+<section id= "content-section" class= "container"> <% @creatures.each do |creature| %>
+  <a href="/creature/<%= creature[:id] %>" class="show-link"><h2> <%= creature[:name]  %></h2></a>
+  <p> <%= creature[:description]  %></p>
+<% end %>
+</section>

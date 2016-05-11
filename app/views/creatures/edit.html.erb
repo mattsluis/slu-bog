@@ -1,2 +1,8 @@
-<h1>Creatures#edit</h1>
-<p>Find me in app/views/creatures/edit.html.erb</p>
+<h2> Edit <% @creature.name  %></h2>
+<%= form_for(@creature) do |c| %>
+  <%= c.text_field :name %>
+  <%= c.text_area :description  %>
+
+  <%= c.collection_check_boxes :tag_ids, @tags, :id, :name  %>
+  <%= c.submit  %>
+  <% end  %>
